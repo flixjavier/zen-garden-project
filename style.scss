@@ -1,0 +1,9 @@
+// styles.scss
+@use 'atoms';  // assumes file is named _atoms.scss
+@use 'molecules';
+@use 'organisms'; //can add 'as o' at the end to shorten it
+@use 'variables' as *;
+
+html {
+    background-color: $background-primary;
+}
