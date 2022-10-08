@@ -1,8 +1,14 @@
 # zen-garden-project
-this project is part of the WDD331 course at BYU. We are going to use CSS to to give a different style to the HTML.
+This project is part of the WDD331 course at BYU. We are going to use CSS to to give a different style to the HTML.
 We can only modify the CSS file.
 
-Members: Julio Caballero, Macy Whitney, Felix Flores
+TEAM #4
+
+* Macy Whitney
+* Julio Caballero
+* Felix Flores
+
+/* TODO
 
 /* TODO
 
@@ -13,6 +19,9 @@ Members: Julio Caballero, Macy Whitney, Felix Flores
       paragraph: Roboto, Serif.
 
 2. Use CSS and Sass to modify the HTML file.
+3. Create Style guide
+4. Wireframes
+
 
 
 
