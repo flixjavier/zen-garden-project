@@ -16,7 +16,7 @@ TEAM #4
   a. Color palette: https://coolors.co/0e1f26-539da6-b4d9d9-f2aa6b-d9753b
   b. Typography:
       Heading: Open Sans, Sans-serif.
-      paragraph: Roboto, Serif.
+      Paragraph: Roboto, Serif.
 
 2. Use CSS and Sass to modify the HTML file.
 3. Create Style guide
