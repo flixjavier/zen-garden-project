@@ -73,7 +73,7 @@ a:hover {
 }
 
 .hero {
-  content: url(/hero.svg);
+  content: url(hero.svg);
   width: 600px;
 }
 
