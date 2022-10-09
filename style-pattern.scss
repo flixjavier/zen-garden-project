@@ -1,7 +1,7 @@
 @use 'variables' as *; //this puts all the variables in the global namespace.
 @use 'atoms';
-//@use 'molecules';
-//@use 'organisms' as o;
+@use 'molecules';
+@use 'organisms' as o;
 
 * {
   box-sizing: border-box;
@@ -63,10 +63,4 @@ section {
   border: 1px solid;
   margin: 0.5em;
   padding: 1em;
-}
-.uppercase {
-  @include atoms.uppercase;
-}
-.uppercase-light {
-  @include atoms.uppercase($text-light);
 }
