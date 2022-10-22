@@ -4,6 +4,12 @@
 @use 'organisms'; //can add 'as o' at the end to shorten it
 @use 'variables' as *;
 
-html {
-    background-color: $background-primary;
+
+body {
+  font-family: $body-font-family;
+  font-size: 85%;
+  color: $text-dark;
+  background-color: $background-primary;
+  margin: 0;
+  
 }

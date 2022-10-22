@@ -1,0 +1,29 @@
+// styles.scss
+@use 'atoms'; 
+@use 'organisms'; 
+@use 'variables' as *;
+
+header {
+    text-align: center;
+}
+
+.preamble {
+    background-color: $accent-blue;
+}
+
+footer {
+    background-color: $accent-orange;
+}
+
+#zen-resources ul li a{
+    color: $text-light;
+}
+
+#zen-resources h3{
+    text-align: center;
+}
+
+#zen-resources ul {
+    width: fit-content;
+   margin: 1em auto;
+}
