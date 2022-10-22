@@ -90,3 +90,51 @@ a:hover {
   width: 600px;
 }
 
+
+// *** CSS Garden Images/Icons ***
+
+// hero image
+header::before {
+  content: $hero-img;
+}
+
+header {
+  h1 {
+    margin-top: -5px;
+  }
+}
+
+// icon mixin -- sets height/width of icon, and causes it to display
+@mixin icon-mobile($height, $width, $icon) {
+  background-image: $icon;
+  height: $height;
+  width: $width;
+  display: inline-block;
+  content: "";
+}
+
+
+// tent
+.preamble h3::before {
+  @include icon-mobile(40px, 40px, $tent-light);
+}
+
+// tree
+.explanation h3::after {
+  @include icon-mobile(40px, 40px, $tree-dark);
+}
+
+// mountains
+.participation h3::before {
+  @include icon-mobile(40px, 40px, $mount-dark);
+}
+
+// compass
+.benefits h3::after {
+  @include icon-mobile(40px, 40px, $compass-dark);
+}
+
+// bear
+.requirements h3::before {
+  @include icon-mobile(40px, 40px, $bear-light);
+}
