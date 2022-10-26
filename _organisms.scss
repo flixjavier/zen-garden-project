@@ -20,5 +20,10 @@
     background-color: $background-dark;
     color: $text-light;
     padding-bottom: 1.5em;
-    margin: 0;
+    padding-left: 3em;
+
 }
+
+.summary, .preamble, .main, .design-selection, .design-archives {
+    margin: 0 3em;
+} 
