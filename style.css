@@ -77,6 +77,54 @@ a:hover {
   width: 600px;
 }
 
+header::before {
+  content: url("images/hero.svg");
+}
+
+header h1 {
+  margin-top: -5px;
+}
+
+.preamble h3::before {
+  background-image: url("images/tent-white.svg");
+  height: 40px;
+  width: 40px;
+  display: inline-block;
+  content: "";
+}
+
+.explanation h3::after {
+  background-image: url("images/tree-black.svg");
+  height: 40px;
+  width: 40px;
+  display: inline-block;
+  content: "";
+}
+
+.participation h3::before {
+  background-image: url("images/mount-black.svg");
+  height: 40px;
+  width: 40px;
+  display: inline-block;
+  content: "";
+}
+
+.benefits h3::after {
+  background-image: url("images/compass-black.svg");
+  height: 40px;
+  width: 40px;
+  display: inline-block;
+  content: "";
+}
+
+.requirements h3::before {
+  background-image: url("images/bear-white.svg");
+  height: 40px;
+  width: 40px;
+  display: inline-block;
+  content: "";
+}
+
 .design-selection {
   background-color: #F2AA6B;
 }
