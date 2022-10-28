@@ -143,7 +143,11 @@ header h1 {
   background-color: #0E1F26;
   color: #fff;
   padding-bottom: 1.5em;
-  margin: 0;
+  padding-left: 3em;
+}
+
+.summary, .preamble, .main, .design-selection, .design-archives {
+  margin: 0 3em;
 }
 
 header {
@@ -162,13 +166,8 @@ footer {
   color: #fff;
 }
 
-#zen-resources h3 {
-  text-align: center;
-}
-
 #zen-resources ul {
   width: fit-content;
-  margin: 1em auto;
 }
 
 body {
