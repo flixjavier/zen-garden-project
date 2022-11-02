@@ -26,7 +26,6 @@ h2 {
   letter-spacing: 2px;
   text-transform: uppercase;
   color: #222;
-  color: #222;
   font-weight: 600;
   font-size: 2.5em;
   letter-spacing: 1px;
@@ -37,6 +36,7 @@ h3 {
   font-size: 2em;
   font-weight: 200; /* Thin */
   letter-spacing: 1px;
+  color: #fff;
   line-height: 1em;
   padding: 0.5em 0 0.25em 0;
 }
@@ -57,13 +57,21 @@ p {
   margin: 0;
 }
 
+.preamble p {
+  color: #fff;
+}
+
+.requirements p{
+  color: #fff;
+}
+
 a {
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
   background-color: none;
   color: #222;
   text-decoration: none;
   transition: border-color 0.2s ease-in-out;
-  padding: 0.5em;
+  padding: 0.5em; 
   margin-top: 1em;
   margin-bottom: 1em;
 }
@@ -159,7 +167,28 @@ header {
 }
 
 footer {
+  display: grid;
+  grid-template-columns: 1fr;
   background-color: #F2AA6B;
+  /* overflow: hidden; */
+  position: fixed;
+  top:55%;
+  left: 0;
+  opacity: 100%;
+  width: 15%;
+  height: auto;
+  border: 1px solid black;
+}
+
+footer a{
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+  height: 50px;
+  text-align: center;
+  padding: 0em; 
+  margin-top: 0em;
+  margin-bottom: 0em;
 }
 
 #zen-resources ul li a {
