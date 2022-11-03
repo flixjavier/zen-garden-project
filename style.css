@@ -187,7 +187,7 @@ footer {
   top:55%;
   left: 0;
   opacity: 100%;
-  width: 10%;
+  width: 5%;
   height: auto;
   border: 1px solid black;
 }
@@ -195,7 +195,9 @@ footer {
 footer a{
   display: grid;
   grid-template-columns: 1fr;
+  font-size: 1.5vw;
   align-items: center;
+  width: 100%;
   height: 30px;
   text-align: center;
   padding: 0em; 
@@ -212,11 +214,17 @@ footer a{
 }
 
 body {
+  display: grid;
+  grid-template-columns: 1fr 20fr 1fr;
   font-family: "Roboto", serif;
   font-size: 85%;
   color: #222;
   background-color: #B4D9D9;
   margin: 0;
+}
+
+.page-wrapper{
+  grid-column: 2;
 }
 
 /*# sourceMappingURL=style.css.map */
