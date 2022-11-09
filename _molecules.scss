@@ -1,6 +1,6 @@
 // styles.scss
-@use 'atoms'; 
-@use 'organisms'; 
+@use 'atoms';
+@use 'organisms';
 @use 'variables' as *;
 
 header {
@@ -13,6 +13,7 @@ header {
 
 footer {
     background-color: $accent-orange;
+    padding: $font-size-lg;
 }
 
 #zen-resources ul li a{
@@ -20,5 +21,5 @@ footer {
 }
 
 #zen-resources ul {
-    width: fit-content;   
+    width: fit-content;
 }
