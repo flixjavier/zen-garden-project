@@ -7,8 +7,8 @@
 
 body {
   font-family: $body-font-family;
-  font-size: 85%;
+  font-size: calc($font-size-base * .9);
   color: $text-dark;
-  background-color: $background-primary;  
-  margin: 0;
+  background-color: $background-primary;
+  margin: 0 auto;
 }

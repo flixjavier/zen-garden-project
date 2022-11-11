@@ -1,7 +1,7 @@
 @use 'variables' as *;
 
 // mixins to take care of repeated patterns.
-@mixin set-font($size: 1em, $line-height: normal, $font: $body-font-family) {
+@mixin set-font($size: $font-size-base, $line-height: normal, $font: $body-font-family) {
   font-family: $font;
   font-size: $size;
   line-height: $line-height;
@@ -36,9 +36,9 @@ h1 {
   color: $text-light;
   display: block;
   font-weight: 100;
-  padding: 0.5em 1em;
-  font-size: 4em;
-  letter-spacing: 3px;
+  padding: $font-size-xl $font-size-sm;
+  font-size: $font-size-xl;
+  // letter-spacing: 3px;
   margin-block-start: 0;
 
 }
@@ -46,22 +46,27 @@ h2 {
   @include uppercase();
   color: $text-dark;
   font-weight: 600;
-  font-size: 2.5em;
-  letter-spacing: 1px;
-  line-height: 1em;
+  font-size: $font-size-lg;
+  // letter-spacing: 1px;
+  // line-height: 1em;
+  margin-bottom: calc($font-size-sm * .5);
+  margin: calc($font-size-sm * .5) auto;
 }
 h3 {
-  font-size: 2em;
+  font-size: calc($font-size-lg * 1.2);
   font-weight: 200; /* Thin */
-  letter-spacing: 1px;
-  line-height: 1em;
-  padding: 0.5em 0 0.25em 0;
+  // letter-spacing: 1px;   // Taking these out helped align the icons and h3 to be centered
+  // line-height: 1em;
+  padding: 0.85em 0 0.2em .5em;
+  display: flex;
+  column-gap: calc($font-size-sm *.7);
+  align-content: center;
 }
 h4 {
-  font-size: 1.5em;
+  font-size: $font-size-lg;
   font-weight: 200; /* Thin */
-  letter-spacing: 1px;
-  line-height: 1em;
+  // letter-spacing: 1px;
+  // line-height: 1em;
   margin: 0.5em 0;
 }
 
@@ -71,22 +76,31 @@ p {
   margin: 0;
 }
 
+p, li {
+  max-width: 66ch;
+}
+
+ul {
+  margin-block-start: calc($font-size-sm * .3);
+}
+
+ul li {
+  margin-bottom: calc($font-size-base * .6);
+}
+
 a {
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
   background-color: none;
   color: $text-dark;
   text-decoration: none;
   transition: border-color 0.2s ease-in-out;
-  padding: .5em;
-  margin-top: 1em;
-  margin-bottom: 1em;
 }
 a:hover {
   background-color: $background-orange;
 }
 
 .hero {
-  content: url(hero.svg);
+  content: $hero-img;
   width: 600px;
 }
 
@@ -107,8 +121,10 @@ header {
 // icon mixin -- sets height/width of icon, and causes it to display
 @mixin icon-mobile($height, $width, $icon) {
   background-image: $icon;
-  height: $height;
-  width: $width;
+  background-repeat: no-repeat;
+  background-size: cover;
+  // height: $height;
+  width: $font-size-xxl;
   display: inline-block;
   content: "";
 }
