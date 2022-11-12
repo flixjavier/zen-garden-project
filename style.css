@@ -1,17 +1,22 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto&display=swap");
+h2,
+h3,
+h4 {
+  font-family: "Open Sans", sans-serif;
+  margin: 0;
+}
+
 h1 {
   font-weight: 300;
   letter-spacing: 2px;
   text-transform: uppercase;
   color: #222;
-  font-size: clamp(1.95rem, 1.83vw + 1.5rem, 2.96rem);
-  font-weight: 100;
   background: #0E1F26;
   color: #fff;
   display: block;
+  font-weight: 100;
   padding: clamp(1.95rem, 1.83vw + 1.5rem, 2.96rem) clamp(0.8rem, 0.25vw + 0.74rem, 0.94rem);
-  /* font-weight: 100;
-  font-size: $font-size-xl; */
+  font-size: clamp(1.95rem, 1.83vw + 1.5rem, 2.96rem);
   margin-block-start: 0;
 }
 
@@ -20,28 +25,28 @@ h2 {
   letter-spacing: 2px;
   text-transform: uppercase;
   color: #222;
-  font-family: "Open Sans", sans-serif;
-  margin: 0;
-  font-size: clamp(1.56rem, 1.2vw + 1.26rem, 2.22rem);
-  font-weight: 600;
   color: #222;
-  /* font-weight: 600;
-  font-size: $font-size-lg; */
+  font-weight: 600;
+  font-size: clamp(1.56rem, 1.2vw + 1.26rem, 2.22rem);
   margin-bottom: calc(clamp(0.8rem, 0.25vw + 0.74rem, 0.94rem) * 0.5);
   margin: calc(clamp(0.8rem, 0.25vw + 0.74rem, 0.94rem) * 0.5) auto;
 }
 
 h3 {
-  font-family: "Open Sans", sans-serif;
-  margin: 0;
   font-size: calc(clamp(1.56rem, 1.2vw + 1.26rem, 2.22rem) * 1.2);
-  font-weight: 200;
-  /* Thin */
+  font-weight: 200; /* Thin */
   padding: 0.85em 0 0.2em 0.5em;
   display: flex;
   column-gap: calc(clamp(0.8rem, 0.25vw + 0.74rem, 0.94rem) * 0.7);
   align-content: center;
   justify-content: center;
+}
+
+h4 {
+  font-size: clamp(1.56rem, 1.2vw + 1.26rem, 2.22rem);
+  font-weight: 200; /* Thin */
+  margin: 0.5em 0;
+}
 
 p {
   font-family: "Roboto", serif;
@@ -58,6 +63,7 @@ p, li {
 ul {
   margin-block-start: calc(clamp(0.8rem, 0.25vw + 0.74rem, 0.94rem) * 0.3);
 }
+
 ul li {
   margin-bottom: calc(clamp(1rem, 0.45vw + 0.89rem, 1.25rem) * 0.6);
 }
