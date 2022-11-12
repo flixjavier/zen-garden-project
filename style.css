@@ -41,6 +41,7 @@ h3 {
   display: flex;
   column-gap: calc(clamp(0.8rem, 0.25vw + 0.74rem, 0.94rem) * 0.7);
   align-content: center;
+  justify-content: center;
 }
 
 p {
@@ -180,6 +181,10 @@ footer {
 
 #zen-resources ul {
   width: fit-content;
+}
+
+ul {
+  margin: 0 auto 0 5em;
 }
 
 body {
