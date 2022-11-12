@@ -1,4 +1,4 @@
-@use 'variables' as *;
+@use "variables" as *;
 
 // mixins to take care of repeated patterns.
 @mixin set-font($size: $font-size-base, $line-height: normal, $font: $body-font-family) {
@@ -70,6 +70,7 @@ h3 {
   column-gap: calc($font-size-sm *.7);
   align-content: center;
   justify-content: center;
+}
 
 p {
   @include set-font(1em, 1.5em);
@@ -128,7 +129,6 @@ header {
   display: inline-block;
   content: "";
 }
-
 
 // tent
 .preamble h3::before {
