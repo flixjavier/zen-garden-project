@@ -23,53 +23,53 @@
   margin-top: 1em;
   padding-top: 1.5em;
 }
-// these styles here should describe how the atoms (elements) should appear most of the time.  They can be overridden at the molecule (block) as necessary
-h2,
-h3,
-h4 {
+
+@mixin head-font(){
   font-family: $headline-font-family;
   margin: 0;
 }
+
+@mixin font-prop($size, $weight){
+  font-size: $size;
+  font-weight: $weight;
+}
+// these styles here should describe how the atoms (elements) should appear most of the time.  They can be overridden at the molecule (block) as necessary
+
 h1 {
   @include uppercase;
+  @include font-prop($font-size-xl, 100);
   background: $background-dark;
   color: $text-light;
   display: block;
-  font-weight: 100;
   padding: $font-size-xl $font-size-sm;
-  font-size: $font-size-xl;
+  /* font-weight: 100;
+  font-size: $font-size-xl; */
   // letter-spacing: 3px;
   margin-block-start: 0;
 
 }
 h2 {
   @include uppercase();
+  @include head-font();
+  @include font-prop($font-size-lg, 600);
   color: $text-dark;
-  font-weight: 600;
-  font-size: $font-size-lg;
+  /* font-weight: 600;
+  font-size: $font-size-lg; */
   // letter-spacing: 1px;
   // line-height: 1em;
   margin-bottom: calc($font-size-sm * .5);
   margin: calc($font-size-sm * .5) auto;
 }
 h3 {
-  font-size: calc($font-size-lg * 1.2);
-  font-weight: 200; /* Thin */
-  // letter-spacing: 1px;   // Taking these out helped align the icons and h3 to be centered
+  @include head-font();
+  @include font-prop(calc($font-size-lg * 1.2), 200); /* Thin */
+    // letter-spacing: 1px;   // Taking these out helped align the icons and h3 to be centered
   // line-height: 1em;
   padding: 0.85em 0 0.2em .5em;
   display: flex;
   column-gap: calc($font-size-sm *.7);
   align-content: center;
   justify-content: center;
-}
-h4 {
-  font-size: $font-size-lg;
-  font-weight: 200; /* Thin */
-  // letter-spacing: 1px;
-  // line-height: 1em;
-  margin: 0.5em 0;
-}
 
 p {
   @include set-font(1em, 1.5em);
@@ -83,10 +83,9 @@ p, li {
 
 ul {
   margin-block-start: calc($font-size-sm * .3);
-}
-
-ul li {
-  margin-bottom: calc($font-size-base * .6);
+  li{
+    margin-bottom: calc($font-size-base * .6);
+  }
 }
 
 a {
