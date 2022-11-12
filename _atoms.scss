@@ -61,6 +61,7 @@ h3 {
   display: flex;
   column-gap: calc($font-size-sm *.7);
   align-content: center;
+  justify-content: center;
 }
 h4 {
   font-size: $font-size-lg;
