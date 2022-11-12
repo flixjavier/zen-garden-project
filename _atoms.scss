@@ -70,7 +70,6 @@ h3 {
   column-gap: calc($font-size-sm *.7);
   align-content: center;
   justify-content: center;
-}
 
 p {
   @include set-font(1em, 1.5em);
