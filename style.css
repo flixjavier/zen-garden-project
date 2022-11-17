@@ -94,6 +94,7 @@ header h1 {
 }
 
 .preamble h3::before {
+  animation: fade 2s 1;
   background-image: url("images/tent-white.svg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -103,6 +104,7 @@ header h1 {
 }
 
 .explanation h3::after {
+  animation: fade 5s 1;
   background-image: url("images/tree-black.svg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -112,6 +114,7 @@ header h1 {
 }
 
 .participation h3::before {
+  animation: fade 5s 1;
   background-image: url("images/mount-black.svg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -121,6 +124,7 @@ header h1 {
 }
 
 .benefits h3::after {
+  animation: fade 5s 1;
   background-image: url("images/compass-black.svg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -130,6 +134,7 @@ header h1 {
 }
 
 .requirements h3::before {
+  animation: fade 5s 1;
   background-image: url("images/bear-white.svg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -138,6 +143,15 @@ header h1 {
   content: "";
 }
 
+@keyframes fade {
+  from {
+    rotate: 45deg;
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 .design-selection {
   background-color: #F2AA6B;
 }
@@ -167,6 +181,11 @@ header h1 {
   color: white;
 }
 
+@media screen and (max-width: 600px) {
+  .preamble h3::before, .explanation h3::after, .participation h3::before, .benefits h3::after, .requirements h3::before {
+    display: none;
+  }
+}
 header {
   text-align: center;
 }
