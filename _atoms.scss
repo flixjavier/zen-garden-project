@@ -138,25 +138,41 @@ header {
 
 // tent
 .preamble h3::before {
-	@include icon-mobile(40px, 40px, $tent-light);
+  animation: fade 2s 1;
+  @include icon-mobile(40px, 40px, $tent-light);
 }
 
 // tree
 .explanation h3::after {
-	@include icon-mobile(40px, 40px, $tree-dark);
+  animation: fade 5s 1;
+  @include icon-mobile(40px, 40px, $tree-dark);
 }
 
 // mountains
 .participation h3::before {
-	@include icon-mobile(40px, 40px, $mount-dark);
+  animation: fade 5s 1;
+  @include icon-mobile(40px, 40px, $mount-dark);
 }
 
 // compass
 .benefits h3::after {
-	@include icon-mobile(40px, 40px, $compass-dark);
+  animation: fade 5s 1;
+  @include icon-mobile(40px, 40px, $compass-dark);
 }
 
 // bear
 .requirements h3::before {
-	@include icon-mobile(40px, 40px, $bear-light);
+  animation: fade 5s 1;
+  @include icon-mobile(40px, 40px, $bear-light);
+}
+
+//Animations Keyframes
+@keyframes fade {
+  from {
+      rotate: (45deg);
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
 }
