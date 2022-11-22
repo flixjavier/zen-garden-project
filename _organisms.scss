@@ -1,5 +1,5 @@
 // styles.scss
-@use 'atoms';
+@use 'atoms' as *;
 @use 'variables' as *;
 
 .design-selection {
@@ -17,11 +17,10 @@
 .zen-resources {
     display: flex;
     flex-direction: column;
-    background-color: $background-dark;
     color: $text-light;
     padding-bottom: 1.5em;
     padding-left: $font-size-lg;
-
+    @include pattern();
 }
 
 .summary, .preamble, .explanation, .benefits, .design-selection, .design-archives, .participation, .requirements {
