@@ -1,6 +1,6 @@
 // styles.scss
-@use "atoms";
-@use "variables" as *;
+@use 'atoms' as *;
+@use 'variables' as *;
 
 .design-selection {
 	background-color: $accent-orange;
@@ -21,6 +21,7 @@
 	color: $text-light;
 	padding-bottom: 1.5em;
 	padding-left: $font-size-lg;
+  @include pattern();
 }
 
 .summary,
