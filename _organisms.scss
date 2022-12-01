@@ -1,40 +1,136 @@
 // styles.scss
-@use 'atoms';
-@use 'variables' as *;
+@use "atoms";
+@use "variables" as *;
 
 .design-selection {
-    background-color: $accent-orange;
+	background-color: $accent-orange;
 }
 
 .participation {
-    background-color: $accent-orange;
+	background-color: $accent-orange;
 }
 
 .requirements {
-    background-color: $accent-blue;
+	background-color: $accent-blue;
 }
 
 .zen-resources {
-    display: flex;
-    flex-direction: column;
-    background-color: $background-dark;
-    color: $text-light;
-    padding-bottom: 1.5em;
-    padding-left: $font-size-lg;
-
+	display: flex;
+	flex-direction: column;
+	background-color: $background-dark;
+	color: $text-light;
+	padding-bottom: 1.5em;
+	padding-left: $font-size-lg;
 }
 
-.summary, .preamble, .explanation, .benefits, .design-selection, .design-archives, .participation, .requirements {
-    padding: 0 $font-size-lg $font-size-lg $font-size-lg;
+.summary,
+.preamble,
+.explanation,
+.benefits,
+.design-selection,
+.design-archives,
+.participation,
+.requirements {
+	padding: 0 $font-size-lg $font-size-lg $font-size-lg;
 }
 
-.preamble, .requirements {
-    color: white;
+.preamble,
+.requirements {
+	color: white;
 }
+
+.page-wrapper{
+    display: grid;
+    grid-template-columns: repeat(10,1fr);
+    grid-template-rows: auto;
+}
+
+.intro{
+    grid-column: 1/-1;
+    grid-row: 1/2;
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+}
+header{
+    grid-column: 1/-1;
+}
+.summary{
+    grid-column: 2/3;
+}
+.preamble{
+    grid-column: 2/3;
+}
+.main{
+    grid-column: 1/-1;
+    grid-row: 2/3;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+.explanation{
+    grid-column: 1/-1;
+    margin: auto;
+}
+.participation{
+    grid-column: 1/4;
+}
+.benefits{
+    grid-column: 4/-1;
+    border: 2px solid black;
+    height: 300px;
+    margin-top: 80px;
+}
+.requirements{
+    grid-column: 2/5;
+}
+footer{
+    grid-column: 1/2;
+    grid-row: 3/4;
+    margin: 10px;
+    display: block;
+    width: 50px;
+    height: 100px;
+    position:sticky;
+    top: 0;
+}
+.sidebar{
+    grid-column:1/-1;
+    grid-row:3/4;
+}
+
+.design-selection{
+    position:absolute;
+    margin-top: -140vw;
+    margin-left: 75vw;
+}
+
+.design-archives{
+    border: 2px solid black;
+    width: 200px;
+    height: auto;
+    position: sticky;
+    margin-top: -8vw;
+    margin-left: 75vw;
+}
+
 
 @media screen and (max-width: 600px) {
-   // tent
-.preamble h3::before, .explanation h3::after, .participation h3::before, .benefits h3::after, .requirements h3::before {
-    display: none;
-  }
-  }
+	// tent
+	.preamble h3::before,
+	.explanation h3::after,
+	.participation h3::before,
+	.benefits h3::after,
+	.requirements h3::before {
+		display: none;
+	}
+
+    .page-wrapper{
+        display: block;
+        margin: auto;
+    }
+    .intro{display: block;}
+    .main{display: block;}
+ 
+    .design-selection{display: block;margin: auto;position: relative;}
+    footer{display: inline;position: relative;margin: auto;width: auto;}
+    .design-archives{display: block;position: relative; margin: auto;}
+}
