@@ -43,7 +43,7 @@
 
 .page-wrapper {
     display: grid;
-    grid-template-columns: 2fr 33.3%;
+    grid-template-columns: 2fr 1fr;
 }
 
 section {
@@ -114,7 +114,15 @@ footer {
 }
 
 //
-
+/* .design-selection::before {
+    width: 100%;
+    margin-left: -2em;
+    height: 500px;
+    position:absolute;
+    top: -500px;
+    content: "";
+    background-color: $accent-orange;
+}  */
 //mobile design
 @media screen and (max-width: 600px) {
 	// tent

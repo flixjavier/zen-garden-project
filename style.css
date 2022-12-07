@@ -282,7 +282,7 @@ header h1 {
 
 .page-wrapper {
   display: grid;
-  grid-template-columns: 2fr 33.3%;
+  grid-template-columns: 2fr 1fr;
 }
 
 section {
@@ -355,6 +355,15 @@ footer {
   text-align: end;
 }
 
+/* .design-selection::before {
+    width: 100%;
+    margin-left: -2em;
+    height: 500px;
+    position:absolute;
+    top: -500px;
+    content: "";
+    background-color: $accent-orange;
+}  */
 @media screen and (max-width: 600px) {
   .preamble h3::before,
 .explanation h3::after,
@@ -423,10 +432,10 @@ ul {
 }
 
 .design-selection {
-  /*     padding-top: 2em; */
-  /*     padding-left: 2em; */
-  z-index: 0;
-  /*     position:relative; */
+  padding-top: 2em;
+  padding-left: 2em;
+  z-index: -1;
+  position: relative;
 }
 
 .design-archives {
