@@ -1,54 +1,46 @@
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Crimson+Pro&display=swap");
 h1 {
-  font-weight: 300;
-  letter-spacing: 2px;
   text-transform: uppercase;
-  color: #222;
-  font-weight: clamp(1.95rem, 1.83vw + 1.5rem, 2.96rem);
-  font-size: 100;
+  font-family: "Open Sans", sans-serif;
+  margin: 0;
+  font-size: clamp(1.95rem, 1.83vw + 1.5rem, 2.96rem);
+  font-weight: 700;
   background: #0E1F26;
   color: #fff;
   display: block;
-  /* font-weight: 100; */
   padding: clamp(1.95rem, 1.83vw + 1.5rem, 2.96rem) clamp(0.8rem, 0.25vw + 0.74rem, 0.94rem);
-  /* font-size: $font-size-xl; */
   margin-block-start: 0;
+  letter-spacing: 0.25em;
 }
 
 h2 {
-  font-weight: 300;
-  letter-spacing: 2px;
   text-transform: uppercase;
-  color: #222;
   font-family: "Open Sans", sans-serif;
   margin: 0;
-  font-weight: clamp(1.56rem, 1.2vw + 1.26rem, 2.22rem);
-  font-size: 600;
+  font-size: clamp(1.25rem, 0.76vw + 1.06rem, 1.67rem);
+  font-weight: 600;
+  font-style: italic;
   color: #222;
-  /* font-weight: 600;
-   font-size: $font-size-lg; */
-  margin-bottom: calc(clamp(0.8rem, 0.25vw + 0.74rem, 0.94rem) * 0.5);
-  margin: calc(clamp(0.8rem, 0.25vw + 0.74rem, 0.94rem) * 0.5) auto;
+  margin: clamp(1.25rem, 0.76vw + 1.06rem, 1.67rem) auto 0 auto;
 }
 
 h3 {
+  text-transform: uppercase;
   font-family: "Open Sans", sans-serif;
   margin: 0;
-  font-weight: calc(clamp(1.56rem, 1.2vw + 1.26rem, 2.22rem) * 1.2);
-  font-size: 200;
-  /* font-size: calc($font-size-lg * 1.2);
-   font-weight: 200; */ /* Thin */
-  padding: 0.85em 0 0.2em 0.5em;
+  font-size: clamp(1.56rem, 1.2vw + 1.26rem, 2.22rem);
+  font-weight: 100;
+  padding: 0.85em 0 0.2em 0.25em;
   display: flex;
   column-gap: calc(clamp(0.8rem, 0.25vw + 0.74rem, 0.94rem) * 0.7);
   align-content: center;
-  justify-content: center;
+  justify-content: left;
 }
 
 p {
-  font-family: "Roboto", serif;
-  font-size: 1em;
-  line-height: 1.5em;
+  font-family: "Crimson Pro", serif;
+  font-size: clamp(1rem, 0.45vw + 0.89rem, 1.25rem);
+  line-height: normal;
   padding: 0.5em;
   margin: 0;
 }
@@ -64,10 +56,11 @@ ul {
 
 ul li {
   margin-bottom: calc(clamp(1rem, 0.45vw + 0.89rem, 1.25rem) * 0.6);
+  list-style: none;
 }
 
 a {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  border-bottom: 1px solid rgba(24, 24, 24, 0.2);
   background-color: none;
   color: #222;
   text-decoration: none;
@@ -75,7 +68,12 @@ a {
 }
 
 a:hover {
-  background-color: #D9753B;
+  border-bottom: 2px #D9753B solid;
+  transition: 0.6s;
+}
+
+.requirements a {
+  color: #B4D9D9;
 }
 
 .hero {
@@ -123,6 +121,11 @@ footer a:active, a:visited {
   background-color: #F2AA6B;
 }
 
+.design-name {
+  text-transform: uppercase;
+  font-family: "Open Sans", sans-serif;
+}
+
 header::before {
   content: url("images/hero_wide.svg");
 }
@@ -136,10 +139,13 @@ header h1 {
   background-image: url("images/tent-white.svg");
   background-repeat: no-repeat;
   background-size: clamp(1.95rem, 1.83vw + 1.5rem, 2.96rem);
-  width: clamp(1.95rem, 1.83vw + 1.5rem, 2.96rem);
+  width: clamp(2.44rem, 2.74vw + 1.76rem, 3.95rem);
   padding-bottom: 5%;
   display: inline-block;
   content: "";
+  padding-bottom: 10%;
+  align-self: center;
+  padding-right: 2%;
 }
 
 .explanation h3::after {
@@ -147,7 +153,7 @@ header h1 {
   background-image: url("images/tree-black.svg");
   background-repeat: no-repeat;
   background-size: clamp(1.95rem, 1.83vw + 1.5rem, 2.96rem);
-  width: clamp(1.95rem, 1.83vw + 1.5rem, 2.96rem);
+  width: clamp(2.44rem, 2.74vw + 1.76rem, 3.95rem);
   padding-bottom: 5%;
   display: inline-block;
   content: "";
@@ -158,7 +164,7 @@ header h1 {
   background-image: url("images/mount-black.svg");
   background-repeat: no-repeat;
   background-size: clamp(1.95rem, 1.83vw + 1.5rem, 2.96rem);
-  width: clamp(1.95rem, 1.83vw + 1.5rem, 2.96rem);
+  width: clamp(2.44rem, 2.74vw + 1.76rem, 3.95rem);
   padding-bottom: 5%;
   display: inline-block;
   content: "";
@@ -169,7 +175,7 @@ header h1 {
   background-image: url("images/compass-black.svg");
   background-repeat: no-repeat;
   background-size: clamp(1.95rem, 1.83vw + 1.5rem, 2.96rem);
-  width: clamp(1.95rem, 1.83vw + 1.5rem, 2.96rem);
+  width: clamp(2.44rem, 2.74vw + 1.76rem, 3.95rem);
   padding-bottom: 5%;
   display: inline-block;
   content: "";
@@ -180,7 +186,7 @@ header h1 {
   background-image: url("images/bear-white.svg");
   background-repeat: no-repeat;
   background-size: clamp(1.95rem, 1.83vw + 1.5rem, 2.96rem);
-  width: clamp(1.95rem, 1.83vw + 1.5rem, 2.96rem);
+  width: clamp(2.44rem, 2.74vw + 1.76rem, 3.95rem);
   padding-bottom: 5%;
   display: inline-block;
   content: "";
@@ -210,11 +216,12 @@ header h1 {
 .zen-resources {
   display: flex;
   flex-direction: column;
+  background-color: #0E1F26;
   color: #fff;
   padding-bottom: 1.5em;
   padding-left: clamp(1.56rem, 1.2vw + 1.26rem, 2.22rem);
-  background: linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px, linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px, linear-gradient(27deg, #222 5px, transparent 5px) 0px 10px, linear-gradient(207deg, #222 5px, transparent 5px) 10px 5px, linear-gradient(90deg, #1b1b1b 10px, transparent 10px), linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424);
-  background-color: #131313;
+  background: linear-gradient(27deg, #0b191e 5px, transparent 5px) 0 5px, linear-gradient(207deg, #0b191e 5px, transparent 5px) 10px 0px, linear-gradient(27deg, #0d1c22 5px, transparent 5px) 0px 10px, linear-gradient(207deg, #0d1c22 5px, transparent 5px) 10px 5px, linear-gradient(90deg, #0E1F26 10px, transparent 10px), linear-gradient(#0E1F26 25%, #0b191e 25%, #0b191e 50%, transparent 50%, transparent 75%, #0d1c22 75%, #0d1c22);
+  background-color: #0a161b;
   background-size: 20px 20px;
 }
 
@@ -234,16 +241,15 @@ header h1 {
   color: white;
 }
 
-
-footer {
-  display: flex;
-  gap: 1em;
-} 
-
 .page-wrapper {
   display: grid;
   grid-template-columns: repeat(10, 1fr);
   grid-template-rows: auto;
+}
+
+footer {
+  display: flex;
+  gap: 1em;
 }
 
 .intro {
@@ -380,11 +386,11 @@ footer {
 }
 
 ul {
-  margin: 0 auto 0 5em;
+  margin: 0 auto 0 auto;
 }
 
 body {
-  font-family: "Roboto", serif;
+  font-family: "Crimson Pro", serif;
   font-size: calc(clamp(1rem, 0.45vw + 0.89rem, 1.25rem) * 0.9);
   color: #222;
   background-color: #B4D9D9;
