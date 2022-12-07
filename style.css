@@ -83,6 +83,46 @@ a:hover {
   width: 600px;
 }
 
+.zen-validate-html {
+  background-image: url(/images/icons8-html-5-50.png);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.zen-validate-css {
+  background-image: url(/images/icons8-css3-60.png);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.zen-license {
+  background-image: url(/images/icons8-creative-commons-50.png);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.zen-accessibility {
+  background-image: url(/images/icons8-assistive-technology-50.png);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.zen-github {
+  background-image: url(/images/icons8-github-50.png);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+footer a {
+  padding: 1em;
+  color: rgba(255, 68, 0, 0);
+  border: none;
+}
+
+footer a:active, a:visited {
+  background-color: #F2AA6B;
+}
+
 header::before {
   content: url("images/hero_wide.svg");
 }
@@ -188,6 +228,12 @@ header h1 {
 .requirements {
   color: white;
 }
+
+
+footer {
+  display: flex;
+  gap: 1em;
+} 
 
 .page-wrapper {
   display: grid;
