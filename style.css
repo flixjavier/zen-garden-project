@@ -1,22 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto&display=swap");
-h2,
-h3,
-h4 {
-  font-family: "Open Sans", sans-serif;
-  margin: 0;
-}
-
 h1 {
   font-weight: 300;
   letter-spacing: 2px;
   text-transform: uppercase;
   color: #222;
+  font-weight: clamp(1.95rem, 1.83vw + 1.5rem, 2.96rem);
+  font-size: 100;
   background: #0E1F26;
   color: #fff;
   display: block;
-  font-weight: 100;
+  /* font-weight: 100; */
   padding: clamp(1.95rem, 1.83vw + 1.5rem, 2.96rem) clamp(0.8rem, 0.25vw + 0.74rem, 0.94rem);
-  font-size: clamp(1.95rem, 1.83vw + 1.5rem, 2.96rem);
+  /* font-size: $font-size-xl; */
   margin-block-start: 0;
 }
 
@@ -25,27 +20,29 @@ h2 {
   letter-spacing: 2px;
   text-transform: uppercase;
   color: #222;
+  font-family: "Open Sans", sans-serif;
+  margin: 0;
+  font-weight: clamp(1.56rem, 1.2vw + 1.26rem, 2.22rem);
+  font-size: 600;
   color: #222;
-  font-weight: 600;
-  font-size: clamp(1.56rem, 1.2vw + 1.26rem, 2.22rem);
+  /* font-weight: 600;
+   font-size: $font-size-lg; */
   margin-bottom: calc(clamp(0.8rem, 0.25vw + 0.74rem, 0.94rem) * 0.5);
   margin: calc(clamp(0.8rem, 0.25vw + 0.74rem, 0.94rem) * 0.5) auto;
 }
 
 h3 {
-  font-size: calc(clamp(1.56rem, 1.2vw + 1.26rem, 2.22rem) * 1.2);
-  font-weight: 200; /* Thin */
+  font-family: "Open Sans", sans-serif;
+  margin: 0;
+  font-weight: calc(clamp(1.56rem, 1.2vw + 1.26rem, 2.22rem) * 1.2);
+  font-size: 200;
+  /* font-size: calc($font-size-lg * 1.2);
+   font-weight: 200; */ /* Thin */
   padding: 0.85em 0 0.2em 0.5em;
   display: flex;
   column-gap: calc(clamp(0.8rem, 0.25vw + 0.74rem, 0.94rem) * 0.7);
   align-content: center;
   justify-content: center;
-}
-
-h4 {
-  font-size: clamp(1.56rem, 1.2vw + 1.26rem, 2.22rem);
-  font-weight: 200; /* Thin */
-  margin: 0.5em 0;
 }
 
 p {
@@ -56,7 +53,8 @@ p {
   margin: 0;
 }
 
-p, li {
+p,
+li {
   max-width: 66ch;
 }
 
@@ -215,22 +213,144 @@ header h1 {
   background-size: 20px 20px;
 }
 
-.summary, .preamble, .explanation, .benefits, .design-selection, .design-archives, .participation, .requirements {
+.summary,
+.preamble,
+.explanation,
+.benefits,
+.design-selection,
+.design-archives,
+.participation,
+.requirements {
   padding: 0 clamp(1.56rem, 1.2vw + 1.26rem, 2.22rem) clamp(1.56rem, 1.2vw + 1.26rem, 2.22rem) clamp(1.56rem, 1.2vw + 1.26rem, 2.22rem);
 }
 
-.preamble, .requirements {
+.preamble,
+.requirements {
   color: white;
 }
+
 
 footer {
   display: flex;
   gap: 1em;
+} 
+
+.page-wrapper {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: auto;
+}
+
+.intro {
+  grid-column: 1/-1;
+  grid-row: 1/2;
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+}
+
+header {
+  grid-column: 1/-1;
+}
+
+.summary {
+  grid-column: 2/3;
+}
+
+.preamble {
+  grid-column: 2/3;
+}
+
+.main {
+  grid-column: 1/-1;
+  grid-row: 2/3;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+.explanation {
+  grid-column: 1/-1;
+  margin: auto;
+}
+
+.participation {
+  grid-column: 1/4;
+}
+
+.benefits {
+  grid-column: 4/-1;
+  border: 2px solid black;
+  height: 300px;
+  margin-top: 80px;
+}
+
+.requirements {
+  grid-column: 2/5;
+}
+
+footer {
+  grid-column: 1/2;
+  grid-row: 3/4;
+  margin: 10px;
+  display: block;
+  width: 50px;
+  height: 100px;
+  position: sticky;
+  top: 0;
+}
+
+.sidebar {
+  grid-column: 1/-1;
+  grid-row: 3/4;
+}
+
+.design-selection {
+  position: absolute;
+  margin-top: -140vw;
+  margin-left: 75vw;
+}
+
+.design-archives {
+  border: 2px solid black;
+  width: 200px;
+  height: auto;
+  position: sticky;
+  margin-top: -8vw;
+  margin-left: 75vw;
 }
 
 @media screen and (max-width: 600px) {
-  .preamble h3::before, .explanation h3::after, .participation h3::before, .benefits h3::after, .requirements h3::before {
+  .preamble h3::before,
+.explanation h3::after,
+.participation h3::before,
+.benefits h3::after,
+.requirements h3::before {
     display: none;
+  }
+  .page-wrapper {
+    display: block;
+    margin: auto;
+  }
+  .intro {
+    display: block;
+  }
+  .main {
+    display: block;
+  }
+  .design-selection {
+    display: block;
+    margin: auto;
+    position: relative;
+  }
+  footer {
+    display: inline;
+    position: relative;
+    margin: auto;
+    width: auto;
+  }
+  .design-archives {
+    display: block;
+    position: relative;
+    margin: auto;
   }
 }
 header {
