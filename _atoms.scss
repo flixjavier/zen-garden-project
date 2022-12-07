@@ -49,6 +49,14 @@
   background-color: #131313;
   background-size: 20px 20px;
 }
+
+@mixin icon($url)
+{
+  background-image: $url;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 // these styles here should describe how the atoms (elements) should appear most of the time.  They can be overridden at the molecule (block) as necessary
 
 h1 {
@@ -123,6 +131,36 @@ a:hover {
 	content: $hero-img;
 	width: 600px;
 }
+.zen-validate-html {
+  @include icon(url(/images/icons8-html-5-50.png));
+}
+
+.zen-validate-css {
+  @include icon(url(/images/icons8-css3-60.png));
+}
+
+.zen-license {
+  @include icon(url(/images/icons8-creative-commons-50.png));
+}
+
+.zen-accessibility {
+  @include icon(url(/images/icons8-assistive-technology-50.png));
+}
+
+.zen-github {
+  @include icon(url(/images/icons8-github-50.png));
+}
+
+footer a {
+  padding: 1em;
+  color: rgb(255, 68, 0,0);
+  border: none;
+}
+
+footer a:active, a:visited {
+  background-color: $accent-orange;
+
+}
 
 // *** CSS Garden Images/Icons ***
 
@@ -136,6 +174,7 @@ header {
 		margin-top: -5px;
 	}
 }
+
 
 // icon mixin -- sets height/width of icon, and causes it to display
 @mixin icon-mobile($icon) {
