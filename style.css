@@ -1,22 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto&display=swap");
-h2,
-h3,
-h4 {
-  font-family: "Open Sans", sans-serif;
-  margin: 0;
-}
-
 h1 {
   font-weight: 300;
   letter-spacing: 2px;
   text-transform: uppercase;
   color: #222;
+  font-weight: clamp(1.95rem, 1.83vw + 1.5rem, 2.96rem);
+  font-size: 100;
   background: #0E1F26;
   color: #fff;
   display: block;
-  font-weight: 100;
+  /* font-weight: 100; */
   padding: clamp(1.95rem, 1.83vw + 1.5rem, 2.96rem) clamp(0.8rem, 0.25vw + 0.74rem, 0.94rem);
-  font-size: clamp(1.95rem, 1.83vw + 1.5rem, 2.96rem);
+  /* font-size: $font-size-xl; */
   margin-block-start: 0;
 }
 
@@ -25,16 +20,24 @@ h2 {
   letter-spacing: 2px;
   text-transform: uppercase;
   color: #222;
+  font-family: "Open Sans", sans-serif;
+  margin: 0;
+  font-weight: clamp(1.56rem, 1.2vw + 1.26rem, 2.22rem);
+  font-size: 600;
   color: #222;
-  font-weight: 600;
-  font-size: clamp(1.56rem, 1.2vw + 1.26rem, 2.22rem);
+  /* font-weight: 600;
+   font-size: $font-size-lg; */
   margin-bottom: calc(clamp(0.8rem, 0.25vw + 0.74rem, 0.94rem) * 0.5);
   margin: calc(clamp(0.8rem, 0.25vw + 0.74rem, 0.94rem) * 0.5) auto;
 }
 
 h3 {
-  font-size: calc(clamp(1.56rem, 1.2vw + 1.26rem, 2.22rem) * 1.2);
-  font-weight: 200; /* Thin */
+  font-family: "Open Sans", sans-serif;
+  margin: 0;
+  font-weight: calc(clamp(1.56rem, 1.2vw + 1.26rem, 2.22rem) * 1.2);
+  font-size: 200;
+  /* font-size: calc($font-size-lg * 1.2);
+   font-weight: 200; */ /* Thin */
   padding: 0.85em 0 0.2em 0.5em;
   display: flex;
   column-gap: calc(clamp(0.8rem, 0.25vw + 0.74rem, 0.94rem) * 0.7);
@@ -50,7 +53,8 @@ p {
   margin: 0;
 }
 
-p, li {
+p,
+li {
   max-width: 66ch;
 }
 
@@ -91,8 +95,9 @@ header h1 {
   animation: fade 2s 1;
   background-image: url("images/tent-white.svg");
   background-repeat: no-repeat;
-  background-size: cover;
-  width: clamp(2.44rem, 2.74vw + 1.76rem, 3.95rem);
+  background-size: clamp(1.95rem, 1.83vw + 1.5rem, 2.96rem);
+  width: clamp(1.95rem, 1.83vw + 1.5rem, 2.96rem);
+  padding-bottom: 5%;
   display: inline-block;
   content: "";
 }
@@ -101,8 +106,9 @@ header h1 {
   animation: fade 5s 1;
   background-image: url("images/tree-black.svg");
   background-repeat: no-repeat;
-  background-size: cover;
-  width: clamp(2.44rem, 2.74vw + 1.76rem, 3.95rem);
+  background-size: clamp(1.95rem, 1.83vw + 1.5rem, 2.96rem);
+  width: clamp(1.95rem, 1.83vw + 1.5rem, 2.96rem);
+  padding-bottom: 5%;
   display: inline-block;
   content: "";
 }
@@ -111,8 +117,9 @@ header h1 {
   animation: fade 5s 1;
   background-image: url("images/mount-black.svg");
   background-repeat: no-repeat;
-  background-size: cover;
-  width: clamp(2.44rem, 2.74vw + 1.76rem, 3.95rem);
+  background-size: clamp(1.95rem, 1.83vw + 1.5rem, 2.96rem);
+  width: clamp(1.95rem, 1.83vw + 1.5rem, 2.96rem);
+  padding-bottom: 5%;
   display: inline-block;
   content: "";
 }
@@ -121,8 +128,9 @@ header h1 {
   animation: fade 5s 1;
   background-image: url("images/compass-black.svg");
   background-repeat: no-repeat;
-  background-size: cover;
-  width: clamp(2.44rem, 2.74vw + 1.76rem, 3.95rem);
+  background-size: clamp(1.95rem, 1.83vw + 1.5rem, 2.96rem);
+  width: clamp(1.95rem, 1.83vw + 1.5rem, 2.96rem);
+  padding-bottom: 5%;
   display: inline-block;
   content: "";
 }
@@ -131,8 +139,9 @@ header h1 {
   animation: fade 5s 1;
   background-image: url("images/bear-white.svg");
   background-repeat: no-repeat;
-  background-size: cover;
-  width: clamp(2.44rem, 2.74vw + 1.76rem, 3.95rem);
+  background-size: clamp(1.95rem, 1.83vw + 1.5rem, 2.96rem);
+  width: clamp(1.95rem, 1.83vw + 1.5rem, 2.96rem);
+  padding-bottom: 5%;
   display: inline-block;
   content: "";
 }
