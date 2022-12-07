@@ -138,12 +138,12 @@ header {
 }
 
 // icon mixin -- sets height/width of icon, and causes it to display
-@mixin icon-mobile($height, $width, $icon) {
+@mixin icon-mobile($icon) {
 	background-image: $icon;
 	background-repeat: no-repeat;
-	background-size: cover;
-	// height: $height;
-	width: $font-size-xxl;
+	background-size: $font-size-xl;
+	width: $font-size-xl;
+	padding-bottom: 5%;
 	display: inline-block;
 	content: "";
 }
@@ -151,31 +151,31 @@ header {
 // tent
 .preamble h3::before {
   animation: fade 2s 1;
-  @include icon-mobile(40px, 40px, $tent-light);
+  @include icon-mobile($tent-light);
 }
 
 // tree
 .explanation h3::after {
   animation: fade 5s 1;
-  @include icon-mobile(40px, 40px, $tree-dark);
+  @include icon-mobile($tree-dark);
 }
 
 // mountains
 .participation h3::before {
   animation: fade 5s 1;
-  @include icon-mobile(40px, 40px, $mount-dark);
+  @include icon-mobile($mount-dark);
 }
 
 // compass
 .benefits h3::after {
   animation: fade 5s 1;
-  @include icon-mobile(40px, 40px, $compass-dark);
+  @include icon-mobile($compass-dark);
 }
 
 // bear
 .requirements h3::before {
   animation: fade 5s 1;
-  @include icon-mobile(40px, 40px, $bear-light);
+  @include icon-mobile($bear-light);
 }
 
 //Animations Keyframes
