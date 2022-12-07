@@ -1,5 +1,5 @@
 //imports Roboto and Open Sans from Google Fonts
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Crimson+Pro&display=swap');
 
 $background-primary: #B4D9D9;
 $accent-blue: #539DA6;
@@ -10,7 +10,7 @@ $text-light: #fff;
 $text-dark: #222;
 
 $headline-font-family: 'Open Sans', sans-serif;
-$body-font-family: 'Roboto', serif;
+$body-font-family: 'Crimson Pro', serif;
 
 // font size clamps
 $font-size-sm: clamp(0.8rem, 0.25vw + 0.74rem, 0.94rem);

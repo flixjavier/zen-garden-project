@@ -15,12 +15,12 @@
 }
 
 .zen-resources {
-	display: flex;
-	flex-direction: column;
 	background-color: $background-dark;
 	color: $text-light;
-	padding-bottom: 1.5em;
-	padding-left: $font-size-lg;
+    padding: 1.5em 0;
+    display: grid;
+	grid-template-columns: 1fr;
+	justify-items: center;
   @include pattern();
 }
 
@@ -40,82 +40,64 @@
 	color: white;
 }
 
-.page-wrapper{
+.page-wrapper {
     display: grid;
-    grid-template-columns: repeat(10,1fr);
-    grid-template-rows: auto;
+    grid-template-columns: 2fr 1fr;
+}
+
+section {
+    grid-column: 1/3;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+
+header {
+    grid-column: 1/3;
+}
+.preamble {
+    grid-column: 1/2;
+}
+
+aside {
+    margin-top: -32em;
+    grid-column: 2/3;
+    grid-row: 2/3;
+}
+
+.main {
+    grid-column: 1/3;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.explanation {
+    grid-column: 1/4;
+    justify-self: center;
+}
+
+.benefits {
+    margin-top: 3em;
+    margin-bottom: 2em;
+    background-color: $background-primary;
+    border-top: solid 5px $background-dark;
+    border-bottom: solid 5px $background-dark;
+}
+
+.participation {
+    grid-column: 1/3;
+    padding-bottom: 5em;
+}
+.requirements {
+    grid-column: 1/4;
+    justify-self: center;
+    margin-left: 5em;
+    margin-top: -4em;
 }
 
 footer {
-    display: flex;
-    gap: 1em
-}
-
-.intro{
-    grid-column: 1/-1;
-    grid-row: 1/2;
-    display: grid;
-    grid-template-columns: 1fr 3fr 1fr;
-}
-header{
-    grid-column: 1/-1;
-}
-.summary{
-    grid-column: 2/3;
-}
-.preamble{
-    grid-column: 2/3;
-}
-.main{
-    grid-column: 1/-1;
-    grid-row: 2/3;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-}
-.explanation{
-    grid-column: 1/-1;
-    margin: auto;
-}
-.participation{
     grid-column: 1/4;
-}
-.benefits{
-    grid-column: 4/-1;
-    border: 2px solid black;
-    height: 300px;
-    margin-top: 80px;
-}
-.requirements{
-    grid-column: 2/5;
-}
-footer{
-    grid-column: 1/2;
-    grid-row: 3/4;
-    margin: 10px;
-    display: block;
-    width: 50px;
-    height: 100px;
-    position:sticky;
-    top: 0;
-}
-.sidebar{
-    grid-column:1/-1;
-    grid-row:3/4;
-}
-
-.design-selection{
-    position:absolute;
-    margin-top: -140vw;
-    margin-left: 75vw;
-}
-
-.design-archives{
-    border: 2px solid black;
-    width: 200px;
-    height: auto;
-    position: sticky;
-    margin-top: -8vw;
-    margin-left: 75vw;
+    justify-self:stretch;
+    text-align: center;
 }
 
 @media screen and (max-width: 600px) {
@@ -134,8 +116,17 @@ footer{
     }
     .intro{display: block;}
     .main{display: block;}
- 
+
     .design-selection{display: block;margin: auto;position: relative;}
-    footer{display: inline;position: relative;margin: auto;width: auto;}
     .design-archives{display: block;position: relative; margin: auto;}
+    .requirements {
+        margin: 0;
+    }
+    .benefits {
+        margin: 0;
+        border: none;
+    }
+    aside {
+        margin: 0;
+    }
 }

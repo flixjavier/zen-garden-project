@@ -25,6 +25,23 @@ footer {
 }
 
 ul {
-    
-    margin: 0 auto 0 5em;
+
+    margin: 0 auto 0 auto;
+}
+
+
+.design-selection {
+    padding-top: 2em;
+    padding-left: 2em;
+    z-index: -1;
+    position:relative;
+}
+
+.design-archives {
+    background-color: $accent-orange;
+}
+
+.design-archives li {
+    display: inline-block;
+    padding-left: 1em;
 }

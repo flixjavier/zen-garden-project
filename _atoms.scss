@@ -16,11 +16,8 @@
 	flex-flow: $direction $wrap;
 }
 
-@mixin uppercase($color: $text-dark) {
-	font-weight: 300;
-	letter-spacing: 2px;
-	text-transform: uppercase;
-	color: $color;
+@mixin uppercase() {
+	text-transform: uppercase;;
 }
 @mixin divider($color: $accent-blue) {
 	border-top: 1px solid $color;
@@ -34,19 +31,22 @@
 }
 
 @mixin font-property($size, $weight) {
-	font-weight: $size;
-	font-size: $weight;
+	font-size: $size;
+	font-weight: $weight;
 }
 
 @mixin pattern(){
+	$bkgd: #0b191e;
+	$bkgd-light-1: #0d1c22;
+	$bkgd-light-2: $background-dark;
   background:
-  linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px,
-  linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px,
-  linear-gradient(27deg, #222 5px, transparent 5px) 0px 10px,
-  linear-gradient(207deg, #222 5px, transparent 5px) 10px 5px,
-  linear-gradient(90deg, #1b1b1b 10px, transparent 10px),
-  linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424);
-  background-color: #131313;
+  linear-gradient(27deg, $bkgd 5px, transparent 5px) 0 5px,
+  linear-gradient(207deg, $bkgd 5px, transparent 5px) 10px 0px,
+  linear-gradient(27deg, $bkgd-light-1 5px, transparent 5px) 0px 10px,
+  linear-gradient(207deg, $bkgd-light-1 5px, transparent 5px) 10px 5px,
+  linear-gradient(90deg, $bkgd-light-2 10px, transparent 10px),
+  linear-gradient($bkgd-light-2 25%, $bkgd 25%, $bkgd 50%, transparent 50%, transparent 75%, $bkgd-light-1 75%, $bkgd-light-1);
+  background-color: #0a161b;
   background-size: 20px 20px;
 }
 
@@ -57,48 +57,43 @@
   background-position: center;
 }
 
-// these styles here should describe how the atoms (elements) should appear most of the time.  They can be overridden at the molecule (block) as necessary
+// These styles here should describe how the atoms (elements) should appear most of the time.
+// They can be overridden at the molecule (block) as necessary
 
 h1 {
 	@include uppercase;
-	@include font-property($font-size-xl, 100);
+	@include headline-style();
+	@include font-property($font-size-xl, 700);
 	background: $background-dark;
 	color: $text-light;
 	display: block;
-	/* font-weight: 100; */
 	padding: $font-size-xl $font-size-sm;
-	/* font-size: $font-size-xl; */
-	// letter-spacing: 3px;
 	margin-block-start: 0;
+	letter-spacing: .25em;
 }
 h2 {
 	@include uppercase();
 	@include headline-style();
-	@include font-property($font-size-lg, 600);
+	@include font-property($font-size-md, 600);
+	text-align:left;
+	padding-left: 1.5em;
+	font-style: italic;
 	color: $text-dark;
-	/* font-weight: 600;
-  font-size: $font-size-lg; */
-	// letter-spacing: 1px;
-	// line-height: 1em;
-	margin-bottom: calc($font-size-sm * 0.5);
-	margin: calc($font-size-sm * 0.5) auto;
+	margin: $font-size-md auto 0 auto;
 }
 h3 {
+	@include uppercase();
 	@include headline-style();
-	@include font-property(calc($font-size-lg * 1.2), 200);
-	/* font-size: calc($font-size-lg * 1.2);
-  font-weight: 200; */ /* Thin */
-	// letter-spacing: 1px;   // Taking these out helped align the icons and h3 to be centered
-	// line-height: 1em;
-	padding: 0.85em 0 0.2em 0.5em;
+	@include font-property($font-size-lg, 100);
+	padding: 0.85em 0 0.2em 0.25em;
 	display: flex;
 	column-gap: calc($font-size-sm * 0.7);
 	align-content: center;
-	justify-content: center;
+	justify-content: left;
 }
 
 p {
-	@include set-font(1em, 1.5em);
+	@include set-font;
 	padding: 0.5em;
 	margin: 0;
 }
@@ -114,23 +109,29 @@ ul {
 
 ul li {
 	margin-bottom: calc($font-size-base * 0.6);
+	list-style: none;
 }
 
 a {
-	border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+	border-bottom: 1px solid rgba(24, 24, 24, 0.2);
 	background-color: none;
 	color: $text-dark;
 	text-decoration: none;
 	transition: border-color 0.2s ease-in-out;
 }
 a:hover {
-	background-color: $background-orange;
+	border-bottom: 2px $background-orange solid;
+	transition: .6s;
 }
 
+.requirements a {
+	color: $background-primary;
+}
 .hero {
 	content: $hero-img;
 	width: 600px;
 }
+
 .zen-validate-html {
   @include icon(url(/images/icons8-html-5-50.png));
 }
@@ -155,11 +156,53 @@ footer a {
   padding: 1em;
   color: rgb(255, 68, 0,0);
   border: none;
+  display: inline-block;
 }
 
 footer a:active, a:visited {
   background-color: $accent-orange;
 
+}
+
+.design-name {
+	@include uppercase();
+	font-family: $headline-font-family;
+}
+
+aside li a {
+	font-size: $font-size-sm;
+}
+
+aside .archives {
+	display: none;
+}
+
+aside h3 {
+	display: none;
+}
+
+.design-selection::before {
+	width: 100%;
+	margin-left: -2em;
+	height: 500px;
+	position:absolute;
+	top: -500px;
+	content: "";
+	background-color: $accent-orange;
+}
+
+.design-selection ul {
+	padding-left: 0;
+}
+
+.zen-resources ul {
+	padding: 0;
+	margin: 0;
+}
+
+.zen-resources ul li {
+	margin: 0;
+	padding: 0.25em;
 }
 
 // *** CSS Garden Images/Icons ***
@@ -177,12 +220,12 @@ header {
 
 
 // icon mixin -- sets height/width of icon, and causes it to display
-@mixin icon-mobile($height, $width, $icon) {
+@mixin icon-mobile($icon) {
 	background-image: $icon;
 	background-repeat: no-repeat;
-	background-size: cover;
-	// height: $height;
+	background-size: $font-size-xl;
 	width: $font-size-xxl;
+	padding-bottom: 5%;
 	display: inline-block;
 	content: "";
 }
@@ -190,31 +233,34 @@ header {
 // tent
 .preamble h3::before {
   animation: fade 2s 1;
-  @include icon-mobile(40px, 40px, $tent-light);
+  @include icon-mobile($tent-light);
+  padding-bottom: 10%;
+  align-self: center;
+  padding-right: 2%;
 }
 
 // tree
 .explanation h3::after {
   animation: fade 5s 1;
-  @include icon-mobile(40px, 40px, $tree-dark);
+  @include icon-mobile($tree-dark);
 }
 
 // mountains
 .participation h3::before {
   animation: fade 5s 1;
-  @include icon-mobile(40px, 40px, $mount-dark);
+  @include icon-mobile($mount-dark);
 }
 
 // compass
 .benefits h3::after {
   animation: fade 5s 1;
-  @include icon-mobile(40px, 40px, $compass-dark);
+  @include icon-mobile($compass-dark);
 }
 
 // bear
 .requirements h3::before {
   animation: fade 5s 1;
-  @include icon-mobile(40px, 40px, $bear-light);
+  @include icon-mobile($bear-light);
 }
 
 //Animations Keyframes
