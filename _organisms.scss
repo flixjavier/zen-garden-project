@@ -4,6 +4,7 @@
 
 .design-selection {
 	background-color: $accent-orange;
+    text-align:end;
 }
 
 .participation {
@@ -42,7 +43,7 @@
 
 .page-wrapper {
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 2fr 33.3%;
 }
 
 section {
@@ -100,6 +101,21 @@ footer {
     text-align: center;
 }
 
+.zen-resources ul{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 10px;
+}
+.design-archives ul{
+    display: flex;
+    flex-direction: column;
+    text-align: end;
+}
+
+//
+
+//mobile design
 @media screen and (max-width: 600px) {
 	// tent
 	.preamble h3::before,
@@ -117,8 +133,8 @@ footer {
     .intro{display: block;}
     .main{display: block;}
 
-    .design-selection{display: block;margin: auto;position: relative;}
-    .design-archives{display: block;position: relative; margin: auto;}
+    .design-selection{display: block;margin: auto;text-align: center;}
+    .design-archives ul{display:flex; flex-direction: row;}
     .requirements {
         margin: 0;
     }
@@ -128,5 +144,9 @@ footer {
     }
     aside {
         margin: 0;
+    }
+    .zen-resources ul{
+        display: flex;
+        flex-direction: column;
     }
 }
