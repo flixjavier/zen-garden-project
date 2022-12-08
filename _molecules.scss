@@ -16,25 +16,14 @@ footer {
     padding: $font-size-lg;
 }
 
-#zen-resources ul li a{
-    color: $text-light;
-}
-
-#zen-resources ul {
-    width: fit-content;
-}
-
 ul {
-
     margin: 0 auto 0 auto;
 }
 
 
 .design-selection {
     padding-top: 2em;
-    padding-left: 2em; 
-    z-index: -1;
-    position:relative; 
+    padding-left: 2em;
 }
 
 .design-archives {

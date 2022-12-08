@@ -62,8 +62,7 @@ ul li {
 }
 
 a {
-  border-bottom: 1px solid rgba(24, 24, 24, 0.2);
-  background-color: none;
+  border-bottom: 2px solid rgba(24, 24, 24, 0.2);
   color: #222;
   text-decoration: none;
   transition: border-color 0.2s ease-in-out;
@@ -71,7 +70,16 @@ a {
 
 a:hover {
   border-bottom: 2px #D9753B solid;
-  transition: 0.6s;
+  transition: 0.5s;
+}
+
+.design-name:hover, .designer-name:hover, .next a:hover, .viewall a:hover, .participation a:hover {
+  color: #fff;
+  transition: 0.5s;
+}
+
+.participation a {
+  color: rgba(0, 0, 0, 0.5019607843);
 }
 
 .requirements a {
@@ -84,31 +92,31 @@ a:hover {
 }
 
 .zen-validate-html {
-  background-image: url(/images/icons8-html-5-50.png);
+  background-image: url(images/icons8-html-5-50.png);
   background-repeat: no-repeat;
   background-position: center;
 }
 
 .zen-validate-css {
-  background-image: url(/images/icons8-css3-60.png);
+  background-image: url(images/icons8-css3-60.png);
   background-repeat: no-repeat;
   background-position: center;
 }
 
 .zen-license {
-  background-image: url(/images/icons8-creative-commons-50.png);
+  background-image: url(images/icons8-creative-commons-50.png);
   background-repeat: no-repeat;
   background-position: center;
 }
 
 .zen-accessibility {
-  background-image: url(/images/icons8-assistive-technology-50.png);
+  background-image: url(images/icons8-assistive-technology-50.png);
   background-repeat: no-repeat;
   background-position: center;
 }
 
 .zen-github {
-  background-image: url(/images/icons8-github-50.png);
+  background-image: url(images/icons8-github-50.png);
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -141,27 +149,28 @@ aside h3 {
   display: none;
 }
 
-/* .design-selection::before {
-	width: 100%;
-	margin-left: -2em;
-	height: 500px;
-	position:absolute;
-	top: -500px;
-	content: "";
-	background-color: $accent-orange;
-} */
 .design-selection ul {
   padding-left: 0;
 }
 
 .zen-resources ul {
-  padding: 0;
   margin: 0;
 }
-
 .zen-resources ul li {
   margin: 0;
   padding: 0.25em;
+}
+.zen-resources ul li a {
+  color: #fff;
+}
+@media screen and (max-width: 600px) {
+  .zen-resources ul li a {
+    font-size: clamp(1rem, 0.45vw + 0.89rem, 1.25rem);
+  }
+}
+
+abbr {
+  text-decoration: none;
 }
 
 header::before {
@@ -170,6 +179,8 @@ header::before {
 
 header h1 {
   margin-top: -5px;
+  z-index: 1;
+  position: relative;
 }
 
 .preamble h3::before {
@@ -177,13 +188,18 @@ header h1 {
   background-image: url("images/tent-white.svg");
   background-repeat: no-repeat;
   background-size: clamp(1.95rem, 1.83vw + 1.5rem, 2.96rem);
-  width: clamp(2.44rem, 2.74vw + 1.76rem, 3.95rem);
-  padding-bottom: 5%;
+  width: clamp(1.95rem, 1.83vw + 1.5rem, 2.96rem);
+  padding-bottom: 4%;
   display: inline-block;
   content: "";
-  padding-bottom: 10%;
+  padding-bottom: 6%;
   align-self: center;
   padding-right: 2%;
+}
+@media screen and (max-width: 1024px) {
+  .preamble h3::before {
+    padding-bottom: 10%;
+  }
 }
 
 .explanation h3::after {
@@ -191,8 +207,8 @@ header h1 {
   background-image: url("images/tree-black.svg");
   background-repeat: no-repeat;
   background-size: clamp(1.95rem, 1.83vw + 1.5rem, 2.96rem);
-  width: clamp(2.44rem, 2.74vw + 1.76rem, 3.95rem);
-  padding-bottom: 5%;
+  width: clamp(1.95rem, 1.83vw + 1.5rem, 2.96rem);
+  padding-bottom: 4%;
   display: inline-block;
   content: "";
 }
@@ -202,8 +218,8 @@ header h1 {
   background-image: url("images/mount-black.svg");
   background-repeat: no-repeat;
   background-size: clamp(1.95rem, 1.83vw + 1.5rem, 2.96rem);
-  width: clamp(2.44rem, 2.74vw + 1.76rem, 3.95rem);
-  padding-bottom: 5%;
+  width: clamp(1.95rem, 1.83vw + 1.5rem, 2.96rem);
+  padding-bottom: 4%;
   display: inline-block;
   content: "";
 }
@@ -213,8 +229,8 @@ header h1 {
   background-image: url("images/compass-black.svg");
   background-repeat: no-repeat;
   background-size: clamp(1.95rem, 1.83vw + 1.5rem, 2.96rem);
-  width: clamp(2.44rem, 2.74vw + 1.76rem, 3.95rem);
-  padding-bottom: 5%;
+  width: clamp(1.95rem, 1.83vw + 1.5rem, 2.96rem);
+  padding-bottom: 4%;
   display: inline-block;
   content: "";
 }
@@ -224,15 +240,15 @@ header h1 {
   background-image: url("images/bear-white.svg");
   background-repeat: no-repeat;
   background-size: clamp(1.95rem, 1.83vw + 1.5rem, 2.96rem);
-  width: clamp(2.44rem, 2.74vw + 1.76rem, 3.95rem);
-  padding-bottom: 5%;
+  width: clamp(1.95rem, 1.83vw + 1.5rem, 2.96rem);
+  padding-bottom: 4%;
   display: inline-block;
   content: "";
 }
 
 @keyframes fade {
   from {
-    rotate: 45deg;
+    transform: rotate(45deg);
     opacity: 0;
   }
   to {
@@ -272,7 +288,7 @@ header h1 {
 .design-archives,
 .participation,
 .requirements {
-  padding: 0 clamp(1.56rem, 1.2vw + 1.26rem, 2.22rem) clamp(1.56rem, 1.2vw + 1.26rem, 2.22rem) clamp(1.56rem, 1.2vw + 1.26rem, 2.22rem);
+  padding: clamp(0.8rem, 0.25vw + 0.74rem, 0.94rem) clamp(1.56rem, 1.2vw + 1.26rem, 2.22rem) clamp(1.56rem, 1.2vw + 1.26rem, 2.22rem) clamp(1.56rem, 1.2vw + 1.26rem, 2.22rem);
 }
 
 .preamble,
@@ -347,23 +363,17 @@ footer {
   flex-direction: row;
   flex-wrap: wrap;
   padding: 10px;
+  justify-content: space-around;
 }
 
 .design-archives ul {
   display: flex;
   flex-direction: column;
   text-align: end;
+  padding-inline-start: 0;
+  justify-content: space-around;
 }
 
-/* .design-selection::before {
-    width: 100%;
-    margin-left: -2em;
-    height: 500px;
-    position:absolute;
-    top: -500px;
-    content: "";
-    background-color: $accent-orange;
-}  */
 @media screen and (max-width: 600px) {
   .preamble h3::before,
 .explanation h3::after,
@@ -404,6 +414,7 @@ footer {
   .zen-resources ul {
     display: flex;
     flex-direction: column;
+    justify-content: space-around;
   }
 }
 header {
@@ -419,14 +430,6 @@ footer {
   padding: clamp(1.56rem, 1.2vw + 1.26rem, 2.22rem);
 }
 
-#zen-resources ul li a {
-  color: #fff;
-}
-
-#zen-resources ul {
-  width: fit-content;
-}
-
 ul {
   margin: 0 auto 0 auto;
 }
@@ -434,8 +437,6 @@ ul {
 .design-selection {
   padding-top: 2em;
   padding-left: 2em;
-  z-index: -1;
-  position: relative;
 }
 
 .design-archives {
