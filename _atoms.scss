@@ -113,15 +113,24 @@ ul li {
 }
 
 a {
-	border-bottom: 1px solid rgba(24, 24, 24, 0.2);
-	background-color: none;
+	border-bottom: 2px solid rgba(24, 24, 24, 0.2);
 	color: $text-dark;
 	text-decoration: none;
 	transition: border-color 0.2s ease-in-out;
 }
 a:hover {
 	border-bottom: 2px $background-orange solid;
-	transition: .6s;
+	transition: .5s;
+}
+
+.design-name:hover, .designer-name:hover, .next a:hover, .viewall a:hover, .participation a:hover {
+	// background-color: #D9753B70;
+	color: $text-light;
+	transition: .5s;
+}
+
+.participation a {
+	color: #00000080;
 }
 
 .requirements a {
@@ -133,23 +142,23 @@ a:hover {
 }
 
 .zen-validate-html {
-  @include icon(url(/images/icons8-html-5-50.png));
+  @include icon(url(images/icons8-html-5-50.png));
 }
 
 .zen-validate-css {
-  @include icon(url(/images/icons8-css3-60.png));
+  @include icon(url(images/icons8-css3-60.png));
 }
 
 .zen-license {
-  @include icon(url(/images/icons8-creative-commons-50.png));
+  @include icon(url(images/icons8-creative-commons-50.png));
 }
 
 .zen-accessibility {
-  @include icon(url(/images/icons8-assistive-technology-50.png));
+  @include icon(url(images/icons8-assistive-technology-50.png));
 }
 
 .zen-github {
-  @include icon(url(/images/icons8-github-50.png));
+  @include icon(url(images/icons8-github-50.png));
 }
 
 footer a {
@@ -181,29 +190,28 @@ aside h3 {
 	display:none;
 }
 
-//This code is not relevant to the grid
-/* .design-selection::before {
-	width: 100%;
-	margin-left: -2em;
-	height: 500px;
-	position:absolute;
-	top: -500px;
-	content: "";
-	background-color: $accent-orange;
-} */
-
 .design-selection ul {
 	padding-left: 0;
 }
 
 .zen-resources ul {
-	padding: 0;
 	margin: 0;
+
+	li {
+		margin: 0;
+		padding: 0.25em;
+
+		a {color: $text-light;}
+
+		@media screen and (max-width: 600px) {
+			a {font-size: $font-size-base;}
+		}
+	}
+
 }
 
-.zen-resources ul li {
-	margin: 0;
-	padding: 0.25em;
+abbr {
+	text-decoration: none;
 }
 
 // *** CSS Garden Images/Icons ***
@@ -216,17 +224,19 @@ header::before {
 header {
 	h1 {
 		margin-top: -5px;
+		z-index: 1;
+		position: relative;
 	}
 }
 
 
 // icon mixin -- sets height/width of icon, and causes it to display
-@mixin icon-mobile($icon) {
+@mixin icon-outdoors($icon) {
 	background-image: $icon;
 	background-repeat: no-repeat;
 	background-size: $font-size-xl;
-	width: $font-size-xxl;
-	padding-bottom: 5%;
+	width: $font-size-xl;
+	padding-bottom: 4%;
 	display: inline-block;
 	content: "";
 }
@@ -234,40 +244,43 @@ header {
 // tent
 .preamble h3::before {
   animation: fade 2s 1;
-  @include icon-mobile($tent-light);
-  padding-bottom: 10%;
+  @include icon-outdoors($tent-light);
+  padding-bottom: 6%;
   align-self: center;
   padding-right: 2%;
+  @media screen and (max-width: 1024px) {
+	padding-bottom: 10%;
+  }
 }
 
 // tree
 .explanation h3::after {
   animation: fade 5s 1;
-  @include icon-mobile($tree-dark);
+  @include icon-outdoors($tree-dark);
 }
 
 // mountains
 .participation h3::before {
   animation: fade 5s 1;
-  @include icon-mobile($mount-dark);
+  @include icon-outdoors($mount-dark);
 }
 
 // compass
 .benefits h3::after {
   animation: fade 5s 1;
-  @include icon-mobile($compass-dark);
+  @include icon-outdoors($compass-dark);
 }
 
 // bear
 .requirements h3::before {
   animation: fade 5s 1;
-  @include icon-mobile($bear-light);
+  @include icon-outdoors($bear-light);
 }
 
 //Animations Keyframes
 @keyframes fade {
   from {
-      rotate: (45deg);
+      transform: rotate(45deg);
       opacity: 0;
   }
   to {

@@ -33,7 +33,7 @@
 .design-archives,
 .participation,
 .requirements {
-	padding: 0 $font-size-lg $font-size-lg $font-size-lg;
+	padding: $font-size-sm $font-size-lg $font-size-lg $font-size-lg;
 }
 
 .preamble,
@@ -106,23 +106,17 @@ footer {
     flex-direction: row;
     flex-wrap: wrap;
     padding: 10px;
+    justify-content: space-around;
 }
+
 .design-archives ul{
     display: flex;
     flex-direction: column;
     text-align: end;
+    padding-inline-start: 0;
+    justify-content: space-around;
 }
 
-//
-/* .design-selection::before {
-    width: 100%;
-    margin-left: -2em;
-    height: 500px;
-    position:absolute;
-    top: -500px;
-    content: "";
-    background-color: $accent-orange;
-}  */
 //mobile design
 @media screen and (max-width: 600px) {
 	// tent
@@ -156,5 +150,6 @@ footer {
     .zen-resources ul{
         display: flex;
         flex-direction: column;
+        justify-content: space-around;
     }
 }
