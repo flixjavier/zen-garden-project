@@ -178,10 +178,11 @@ aside .archives {
 }
 
 aside h3 {
-	display: none;
+	display:none;
 }
 
-.design-selection::before {
+//This code is not relevant to the grid
+/* .design-selection::before {
 	width: 100%;
 	margin-left: -2em;
 	height: 500px;
@@ -189,7 +190,7 @@ aside h3 {
 	top: -500px;
 	content: "";
 	background-color: $accent-orange;
-}
+} */
 
 .design-selection ul {
 	padding-left: 0;
